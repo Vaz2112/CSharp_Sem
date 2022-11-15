@@ -16,4 +16,3 @@ if (max < num2)  max = num2;
 if (max < num3)  max = num3;
 
 Console.WriteLine($"Максимальное число {max}");
-
