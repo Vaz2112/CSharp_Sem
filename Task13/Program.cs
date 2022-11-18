@@ -12,6 +12,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int ThirdDigit(int num)
 {
+    num=Math.Abs(num);
     while (num > 999)
     {
         num = num / 10;
@@ -19,7 +20,7 @@ int ThirdDigit(int num)
     return num % 10;
 }
 
-if (number < 100) Console.WriteLine("Третьей цифры нет");
+if (Math.Abs(number) < 100) Console.WriteLine("Третьей цифры нет");
 else
 {
     int thirdDigit = ThirdDigit(number);
