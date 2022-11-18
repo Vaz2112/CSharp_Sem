@@ -12,7 +12,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int ThirdDigit(int num)
 {
-    num=Math.Abs(num);
+    num = Math.Abs(num);
     while (num > 999)
     {
         num = num / 10;
