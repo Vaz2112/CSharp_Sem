@@ -14,8 +14,14 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 void Quad(int num)
 {
-    Console.Write($"{num} {Math.Pow(num, 3)}");
-    Console.WriteLine();
+    int count = 1;
+    while (count <= num)
+    {
+        Console.Write($"{count} {Math.Pow(count, 3)}");
+        Console.WriteLine();
+        count++;
+    }
+
 }
 
 if (number <= 0)
@@ -24,10 +30,5 @@ if (number <= 0)
 }
 else
 {
-    int count = 1;
-    while (count <= number)
-    {
-        Quad(count);
-        count++;
-    }
+    Quad(number);
 }
