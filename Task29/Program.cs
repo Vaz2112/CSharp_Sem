@@ -11,12 +11,12 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите целое число - верхнюю границу диапазона случайных чисел: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
-void FillArray(int[] arr)
+void FillArray(int[] arr, int minR, int maxR)
 {
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(min, max + 1);
+        arr[i] = rnd.Next(minR, maxR + 1);
     }
 }
 
@@ -32,7 +32,7 @@ void PrintArray(int[] arr)
 
 if (min <= max)
 {
-    FillArray(array);
+    FillArray(array, min, max);
     PrintArray(array);
 }
 else
