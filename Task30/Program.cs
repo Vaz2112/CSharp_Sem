@@ -1,4 +1,7 @@
-﻿int[] array = new int[8];
+﻿// 1.задаёт массив из 8 элементов из 0 и 1 
+// 2.выводит их на экран.
+
+int[] array = new int[8];
 
 // int[] FillArray(int[] arr)
 // {
