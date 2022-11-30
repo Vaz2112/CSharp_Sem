@@ -27,7 +27,7 @@ void PrintArray(double[] array)
     Console.WriteLine("]");
 }
 
-double DifferenceMaxMin(double[] array)
+/* double DifferenceMaxMin(double[] array)
 {
     double min = array[0];
     double max = array[0];
@@ -37,12 +37,33 @@ double DifferenceMaxMin(double[] array)
         if (min > array[i]) min = array[i];
     }
     return max - min;
+} */
+
+double MinElement(double[] array)
+{
+    double min = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (min > array[i]) min = array[i];
+    }
+    return min;
+}
+
+double MaxElement(double[] array)
+{
+    double max = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (max < array[i]) max = array[i];
+    }
+    return max;
 }
 
 double[] arr = CreateArrayRndDouble(10, 0, 100);
 
 PrintArray(arr);
 
-double differenceMaxMin = DifferenceMaxMin(arr);
+double differenceMaxMin = MaxElement(arr) - MinElement(arr);
+//double differenceMaxMin = DifferenceMaxMin(arr);
 
 Console.WriteLine($"Разницу между максимальным и минимальным элементами массива = {differenceMaxMin}");
