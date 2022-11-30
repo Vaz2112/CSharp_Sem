@@ -22,8 +22,11 @@ double[] Intersection(double vb1, double vk1, double vb2, double vk2)
         pointXY[0] = 0;
         pointXY[1] = vb1;
     }
-    else pointXY[0] = Math.Round((vb2 - vb1) / (vk1 - vk2), 1);
-    pointXY[1] = Math.Round(vk1 * pointXY[0] + vb1, 1);
+    else
+    {
+        pointXY[0] = Math.Round((vb2 - vb1) / (vk1 - vk2), 1);
+        pointXY[1] = Math.Round(vk1 * pointXY[0] + vb1, 1);
+    }
     return pointXY;
 }
 
