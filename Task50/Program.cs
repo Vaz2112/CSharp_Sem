@@ -49,7 +49,7 @@ Console.WriteLine("Введите индекс стоблца");
 int iColumn = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 
-if (iRow > array2DdoubleRound.GetLength(0) - 1 || iColumn > array2DdoubleRound.GetLength(1) - 1)
+if (iRow > array2DdoubleRound.GetLength(0) - 1 || iRow < 0 || iColumn > array2DdoubleRound.GetLength(1) - 1 || iColumn < 0)
 {
     Console.WriteLine("Такого элемента в массиве нет!");
 }
